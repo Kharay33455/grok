@@ -1,7 +1,7 @@
 use std::time::Instant;
 
 fn main() {
-	println!("Hello world");
+    println!("Hello from RUST");
     let start = Instant::now();
 
     let baseline: [&str; 30] = ["8"; 30];
@@ -17,7 +17,7 @@ fn main() {
         &[6, 7, 8, 14, 15, 16, 22, 23, 24],
         &[6, 7, 8, 9, 21, 22, 23],
         &[7, 8, 9, 18, 19, 20, 21, 22, 23],
-        &[6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+        &[6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
         &[4, 5, 11, 12, 13, 14, 15, 16, 17, 18],
         &[],
         &[-1],
@@ -42,10 +42,10 @@ fn main() {
 
     let duration = start.elapsed();
     let micros = duration.as_micros();
-    let millis = duration.as_millis();
+    let _millis = duration.as_millis();
     let secs = duration.as_secs_f64();
 
     println!("Time taken in microseconds: {}", micros);
-    println!("Time taken in milliseconds: {}", millis);
+    println!("Time taken in milliseconds: {}", micros as f32/1000.0);
     println!("Time taken in seconds: {:.6}", secs);
 }
